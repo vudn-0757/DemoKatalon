@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>login</name>
+   <name>loginsuccessfully</name>
    <tag></tag>
    <elementGuidId>27f7309c-e0e2-452e-84c7-2c40d2bbbf1e</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
