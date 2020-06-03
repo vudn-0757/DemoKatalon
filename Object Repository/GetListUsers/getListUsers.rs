@@ -13,7 +13,7 @@
    <katalonVersion>7.5.2</katalonVersion>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${url}/api/users</restUrl>
+   <restUrl>${url}/api/users?page=2</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
