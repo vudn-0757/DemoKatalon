@@ -33,14 +33,14 @@
    <soapServiceFunction></soapServiceFunction>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>GlobalVariable.user_name</defaultValue>
+      <defaultValue>findTestData('CreateNewUserData').getValue(1, 1)</defaultValue>
       <description></description>
       <id>a2e2440f-2563-42a4-8f95-f7b9bc0f1533</id>
       <masked>false</masked>
       <name>user_name</name>
    </variables>
    <variables>
-      <defaultValue>GlobalVariable.job</defaultValue>
+      <defaultValue>findTestData('CreateNewUserData').getValue(2, 1)</defaultValue>
       <description></description>
       <id>767090ef-d6af-48eb-b8ac-6470d822aad5</id>
       <masked>false</masked>
