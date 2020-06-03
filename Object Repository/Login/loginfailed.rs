@@ -65,9 +65,6 @@ import internal.GlobalVariable as GlobalVariable
 
 RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-
-
-
 WS.verifyResponseStatusCode(response, 400)
 assertThat(response.getStatusCode()).isEqualTo(400)
 WS.verifyElementPropertyValue(response, 'error', 'Missing password')</verificationScript>
