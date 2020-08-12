@@ -16,5 +16,16 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-response = WS.sendRequestAndVerify(findTestObject('CreateNewUser/createNewUser', [('user_name') : findTestData('CreateNewUserData').getValue(
-                1, 1), ('job') : findTestData('CreateNewUserData').getValue(2, 1), ('url') : GlobalVariable.url]))
+response = WS.sendRequest(findTestObject('CreateNewUser/registerUser', [('url') : GlobalVariable.url]))
+
+def slurper = new groovy.json.JsonSlurper()
+
+def result = slurper.parseText(response.getResponseBodyContent())
+
+def token_value = result.token
+
+GlobalVariable.TOKEN = token_value
+
+WS.sendRequestAndVerify(findTestObject('Login/loginsuccessfully', [('url') : GlobalVariable.url, ('email') : findTestData(
+                'LoginData').getValue(1, 1), ('password') : findTestData('LoginData').getValue(2, 1)]))
+
