@@ -26,6 +26,8 @@ def token_value = result.token
 
 GlobalVariable.TOKEN = token_value
 
+System.out.println("TOKEN is:" + GlobalVariable.TOKEN)
+
 WS.sendRequestAndVerify(findTestObject('Login/loginsuccessfully', [('url') : GlobalVariable.url, ('email') : findTestData(
                 'LoginData').getValue(1, 1), ('password') : findTestData('LoginData').getValue(2, 1)]))
 

@@ -16,7 +16,8 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-response = WS.sendRequest(findTestObject('Login/loginsuccessfully', [('url') : GlobalVariable.url]))
+response = WS.sendRequest(findTestObject('Login/loginsuccessfully', [('url') : GlobalVariable.url, ('email') : findTestData(
+                'LoginData').getValue(1, 1), ('password') : findTestData('LoginData').getValue(2, 1)]))
 
 WS.verifyElementPropertyValue(response, 'token', GlobalVariable.TOKEN)
 

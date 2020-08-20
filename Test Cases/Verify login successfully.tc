@@ -5,4 +5,25 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>946c5939-9ece-41dd-b0a5-3cfa16a5bae0</testCaseGuid>
+   <variable>
+      <defaultValue>GlobalVariable.url</defaultValue>
+      <description></description>
+      <id>66cb277c-1be8-4f65-ab89-a668a4bc7c9a</id>
+      <masked>false</masked>
+      <name>url</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>5fff5113-110f-4d15-8859-b7f0e58ca83e</id>
+      <masked>false</masked>
+      <name>email</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>10ea2c30-4eda-4815-9855-e4202f24234e</id>
+      <masked>false</masked>
+      <name>password</name>
+   </variable>
 </TestCaseEntity>
