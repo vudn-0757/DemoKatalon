@@ -15,10 +15,14 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import com.database.ConnectionManager
+import com.database.ConnectionManager as ConnectionManager
 
+CustomKeywords.'com.database.ConnectionManager.connectDB'('10.0.4.49', 'authentication', '3306', 'monoful', 'monoful')
 
-CustomKeywords.'com.database.ConnectionManager.connectDB'("10.0.4.49", "authentication", "3306", "monoful", "monoful")
-def user_name = CustomKeywords.'com.database.ConnectionManager.executeQuery'('SELECT name FROM authentication.users where name = "Vu Doan 1993";', 'name')
+def query = 'SELECT name FROM authentication.users where name = "Vu Doan 1993";'
+def user_name = CustomKeywords.'com.database.ConnectionManager.retrievingDataFromQuery'(query, 'name')
+
 println('Username is:' + user_name)
+
 CustomKeywords.'com.database.ConnectionManager.closeDatabaseConnection'()
+
