@@ -18,10 +18,7 @@ import internal.GlobalVariable as GlobalVariable
 
 response = WS.sendRequest(findTestObject('CreateNewUser/registerUser', [('url') : GlobalVariable.url]))
 
-def slurper = new groovy.json.JsonSlurper()
-
-def result = slurper.parseText(response.getResponseBodyContent())
-
+def result = CustomKeywords.'com.json.JsonSlurperManager.retrievingDataFromAPIResponse'(response)
 def token_value = result.token
 
 GlobalVariable.TOKEN = token_value
